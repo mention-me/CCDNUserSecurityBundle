@@ -14,10 +14,10 @@
     ],
     "minimum-stability": "dev",
     "require": {
-        "php": ">=5.3.3",
-        "symfony/symfony": "~4.0|~5.0",
-        "doctrine/orm": "~2.2,>=2.2.3",
-        "doctrine/doctrine-bundle": "~1.2|~2.0"
+        "php": "^7.4",
+        "symfony/symfony": "~5.1",
+        "doctrine/orm": "~2.7.4",
+        "doctrine/doctrine-bundle": "~2.2.1"
     },
     "require-dev": {
         "symfony/swiftmailer-bundle": "~2.3",

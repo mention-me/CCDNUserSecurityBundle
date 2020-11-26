@@ -72,4 +72,4 @@ services:
         parent: security.authentication.success_handler
 
     ccdn_user_security.component.authentication.handler.logout_success_handler:
-        parent: security.logout.success_handler
+        parent: security.logout.listener.default
