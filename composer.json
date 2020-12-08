@@ -1,8 +1,8 @@
 {
-    "name": "codeconsortium/ccdn-user-security-bundle",
-    "description": "CCDN User Security Bundle",
-    "keywords": ["ccdn", "codeconsortium", "user", "security", "brute force", "dictionary attack", "login"],
-    "homepage": "http://github.com/codeconsortium/CCDNUserSecurityBundle",
+    "name": "grizzlylab/ccdn-user-security-bundle",
+    "description": "Fork of CCDN User Security Bundle for Symfony 5",
+    "keywords": ["ccdn", "codeconsortium", "user", "security", "brute force", "dictionary attack", "login", "symfony"],
+    "homepage": "http://github.com/grizzlylab/CCDNUserSecurityBundle",
     "type": "symfony-bundle",
     "license": "MIT",
     "authors": [
@@ -10,6 +10,11 @@
             "name": "Reece Fowell",
             "email": "reece@codeconsortium.com",
             "homepage": "http://www.reecefowell.com"
+        },
+        {
+            "name": "Jean-Louis Pirson",
+            "email": "jl.pirson@grizzlylab.be",
+            "homepage": "https://www.grizzlylab.be"
         }
     ],
     "minimum-stability": "dev",
