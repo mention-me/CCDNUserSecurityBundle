@@ -4,7 +4,7 @@ namespace CCDNUser\SecurityBundle\Component\Listener;
 
 use CCDNUser\SecurityBundle\Component\Authorisation\SecurityManagerInterface;
 use Symfony\Component\HttpFoundation\RedirectResponse;
-use Symfony\Component\HttpKernel\Event\GetResponseEvent;
+use Symfony\Component\HttpKernel\Event\RequestEvent;
 use Symfony\Component\HttpKernel\HttpKernelInterface;
 use Symfony\Component\Routing\RouterInterface;
 
@@ -46,7 +46,7 @@ class DeferLoginListener
         $this->forceAccountRecovery = $forceAccountRecovery;
     }
 
-    public function onKernelRequest(GetResponseEvent $event)
+    public function onKernelRequest(RequestEvent $event)
     {
         if ($event->getRequestType() !== HttpKernelInterface::MASTER_REQUEST) {
             return;
