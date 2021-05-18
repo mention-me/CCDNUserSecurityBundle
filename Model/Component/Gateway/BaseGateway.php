@@ -13,7 +13,7 @@
 
 namespace CCDNUser\SecurityBundle\Model\Component\Gateway;
 
-use Doctrine\Common\Persistence\ObjectManager;
+use Doctrine\ORM\EntityManagerInterface;
 use Doctrine\ORM\QueryBuilder;
 
 /**
@@ -30,27 +30,10 @@ use Doctrine\ORM\QueryBuilder;
  */
 abstract class BaseGateway
 {
-    /**
-     *
-     * @access protected
-     * @var \Doctrine\ORM\EntityManager $em
-     */
-    protected $em;
+    protected EntityManagerInterface $em;
+    protected string $entityClass;
 
-    /**
-     *
-     * @access private
-     * @var string $entityClass
-     */
-    protected $entityClass;
-
-    /**
-     *
-     * @access public
-     * @param \Doctrine\Common\Persistence\ObjectManager $em
-     * @param string                                     $entityClass
-     */
-    public function __construct(ObjectManager $em, $entityClass)
+    public function __construct(EntityManagerInterface $em, string $entityClass)
     {
         if (null == $entityClass) {
             throw new \Exception('Entity class for gateway must be specified!');
